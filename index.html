@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi cosito ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Quicksand:wght@400;500;600&display=swap');
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:#100c18;
+  color:#fff3ff;
+  font-family:'Quicksand',sans-serif;
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+  radial-gradient(circle at 15% 20%,rgba(210,160,220,.16),transparent 30%),
+  radial-gradient(circle at 85% 75%,rgba(130,90,180,.13),transparent 32%);
+}
+
+section{
+  min-height:100vh;
+  padding:70px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card{
+  width:min(850px,100%);
+  padding:35px 24px;
+  background:rgba(30,22,40,.78);
+  border:1px solid rgba(255,220,255,.15);
+  border-radius:30px;
+  box-shadow:0 20px 70px rgba(0,0,0,.4);
+  backdrop-filter:blur(12px);
+}
+
+.center{text-align:center}
+
+.kicker{
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:11px;
+  opacity:.6;
+}
+
+h1,h2{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+}
+
+h1{
+  font-size:clamp(52px,14vw,90px);
+  margin:15px 0 5px;
+}
+
+h2{
+  font-size:clamp(38px,9vw,60px);
+  margin:5px 0 20px;
+}
+
+p{
+  line-height:1.8;
+  font-size:16px;
+}
+
+.subtitle{
+  font-size:18px;
+  opacity:.8;
+}
+
+.btn{
+  border:1px solid rgba(255,225,255,.3);
+  background:rgba(255,255,255,.08);
+  color:white;
+  padding:14px 24px;
+  border-radius:999px;
+  font:inherit;
+  cursor:pointer;
+  margin:8px 4px;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.15);
+}
+
+.love-list{
+  display:grid;
+  gap:12px;
+  margin-top:25px;
+}
+
+.love{
+  padding:17px;
+  border-radius:18px;
+  background:rgba(255,255,255,.05);
+  border-left:2px solid #dcb9e8;
+}
+
+.memories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:15px;
+}
+
+.memory{
+  min-height:180px;
+  padding:20px;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+  border:1px dashed rgba(255,220,255,.2);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+
+.memory .emoji{
+  font-size:40px;
+  margin-bottom:auto;
+}
+
+.letter{
+  padding:25px;
+  border-radius:22px;
+  background:rgba(0,0,0,.18);
+  line-height:1.9;
+  text-align:left;
+}
+
+.secret{
+  margin-top:20px;
+  padding:25px;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+}
+
+.hidden{display:none}
+
+.small{
+  opacity:.6;
+  font-size:13px;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.5;
+  font-size:12px;
+}
+
+.star{
+  position:fixed;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  opacity:.7;
+  animation:twinkle 3s infinite;
+  pointer-events:none;
+}
+
+.heart{
+  position:fixed;
+  bottom:-30px;
+  opacity:0;
+  pointer-events:none;
+  animation:float 9s linear infinite;
+}
+
+@keyframes twinkle{
+  50%{opacity:.15;transform:scale(.5)}
+}
+
+@keyframes float{
+  0%{transform:translateY(0);opacity:0}
+  15%{opacity:.5}
+  85%{opacity:.25}
+  100%{transform:translateY(-110vh) rotate(20deg);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<script>
+for(let i=0;i<70;i++){
+  let s=document.createElement("div");
+  s.className="star";
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+  s.style.animationDelay=Math.random()*4+"s";
+  document.body.appendChild(s);
+}
+
+for(let i=0;i<15;i++){
+  let h=document.createElement("div");
+  h.className="heart";
+  h.textContent=["♡","♥","✦","⋆"][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+"%";
+  h.style.animationDelay=Math.random()*9+"s";
+  h.style.animationDuration=(7+Math.random()*6)+"s";
+  document.body.appendChild(h);
+}
+
+function ir(id){
+  document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+function secreto(){
+  document.getElementById("mensaje").classList.remove("hidden");
+}
+</script>
+
+
+<section id="inicio">
+<div class="card center">
+
+<div class="kicker">un pequeño lugar para ti</div>
+
+<h1>Para mi cosito ♡</h1>
+
+<p class="subtitle">
+Hice esto pensando en ti.<br>
+Así que abre despacito, ¿sí?
+</p>
+
+<button class="btn" onclick="ir('bienvenida')">
+abrir ♡
+</button>
+
+<p class="small">✦ hecho con mucho cariño ✦</p>
+
+</div>
+</section>
+
+
+<section id="bienvenida">
+<div class="card center">
+
+<div class="kicker">hola, tú</div>
+
+<h2>Antes de seguir…</h2>
+
+<p>
+No sabía muy bien cómo guardar todos esos pequeños
+momentos que tengo contigo, así que hice este rinconcito.
+</p>
+
+<p>
+Es pequeñito, pero está hecho pensando completamente en ti. ♡
+</p>
+
+<button class="btn" onclick="ir('cosas')">
+seguir →
+</button>
+
+</div>
+</section>
+
+
+<section id="cosas">
+<div class="card">
+
+<div class="kicker center">cositas que adoro</div>
+
+<h2 class="center">Hay tantas…</h2>
+
+<div class="love-list">
+
+<div class="love">
+♡ Tus audios y tu forma de hablar conmigo.
+</div>
+
+<div class="love">
+♡ Cuando haces cosas tiernas sin darte cuenta.
+</div>
+
+<div class="love">
+♡ Cuando cantas cualquier tontería y yo termino toda derretida.
+</div>
+
+<div class="love">
+♡ Nuestros momentos tranquilos, incluso cuando no hacemos nada especial.
+</div>
+
+<div class="love">
+♡ La manera en que consigues hacerme sonreír con cosas pequeñitas.
+</div>
+
+<div class="love">
+♡ Y poder llamarte “mi cosito”. ♡
+</div>
+
+</div>
+
+<br>
+
+<div class="center">
+<button class="btn" onclick="ir('recuerdos')">
+nuestros recuerdos →
+</button>
+</div>
+
+</div>
+</section>
+
+
+<section id="recuerdos">
+<div class="card">
+
+<div class="kicker center">nuestro pequeño álbum</div>
+
+<h2 class="center">Momentitos ♡</h2>
+
+<p class="center">
+Aquí después podemos poner nuestras fotos,
+capturas, fechas y recuerdos favoritos.
+</p>
+
+<div class="memories">
+
+<div class="memory">
+<div class="emoji">🌙</div>
+<strong>Un recuerdo nuestro</strong>
+<span class="small">Aquí pondremos una foto.</span>
+</div>
+
+<div class="memory">
+<div class="emoji">🎧</div>
+<strong>Un audio que amo</strong>
+<span class="small">Aquí podremos poner un audio.</span>
+</div>
+
+<div class="memory">
+<div class="emoji">🌷</div>
+<strong>Un momento pequeñito</strong>
+<span class="small">Una captura o una frase.</span>
+</div>
+
+<div class="memory">
+<div class="emoji">♡</div>
+<strong>Otro momento especial</strong>
+<span class="small">Este también será editable.</span>
+</div>
+
+</div>
+
+<br>
+
+<div class="center">
+<button class="btn" onclick="ir('musica')">
+música →
+</button>
+</div>
+
+</div>
+</section>
+
+
+<section id="musica">
+<div class="card center">
+
+<div class="kicker">para escuchar mientras lees</div>
+
+<h2>🎧 Nuestra canción</h2>
+
+<p>
+Aquí vamos a poner la canción de <b>Inuyasha</b> que elijas.
+♡
+</p>
+
+<button class="btn"
+onclick="alert('Aquí pondremos nuestra canción de Inuyasha ♡')">
+♡ poner música ♡
+</button>
+
+<p class="small">
+La música se activará con un botón porque los teléfonos
+normalmente bloquean la reproducción automática.
+</p>
+
+<button class="btn" onclick="ir('carta')">
+hay una carta para ti →
+</button>
+
+</div>
+</section>
+
+
+<section id="carta">
+<div class="card">
+
+<div class="kicker center">abre cuando quieras</div>
+
+<h2 class="center">Una carta para ti 💌</h2>
+
+<div class="letter">
+
+Aquí irá LA CARTA que hicimos juntos. ♡
+
+Esta será una de las partes principales
+de toda la página.
+
+</div>
+
+<br>
+
+<div class="center">
+<button class="btn" onclick="ir('secreto')">
+¿todavía falta algo? →
+</button>
+</div>
+
+</div>
+</section>
+
+
+<section id="secreto">
+<div class="card center">
+
+<div class="kicker">shhh…</div>
+
+<h2>Encontraste el secreto 🔐</h2>
+
+<p>
+Pero no aparece así nomás…
+</p>
+
+<button class="btn" onclick="secreto()">
+descubrir ♡
+</button>
+
+<div id="mensaje" class="secret hidden">
+
+<p>Si llegaste hasta aquí…</p>
+
+<h2>
+te quiero muchísimo. ♡
+</h2>
+
+<p>
+Y espero que cuando veas esto puedas sentir
+aunque sea un poquito de todo el cariño
+con el que lo hice.
+</p>
+
+</div>
+
+<br>
+
+<button class="btn" onclick="ir('final')">
+última cosita →
+</button>
+
+</div>
+</section>
+
+
+<section id="final">
+<div class="card center">
+
+<div class="kicker">fin… por ahora</div>
+
+<h2>Gracias por existir. ♡</h2>
+
+<p>
+Y si algún día necesitas recordar que hay alguien
+que piensa en ti, vuelve aquí.
+</p>
+
+<h2 style="font-size:42px">
+Te amo, cosito.
+</h2>
+
+<p>♡</p>
+
+<button class="btn" onclick="ir('inicio')">
+volver al principio ↺
+</button>
+
+</div>
+</section>
+
+
+<footer>
+hecho con ♡ especialmente para ti
+</footer>
+
+</body>
+  </html>
