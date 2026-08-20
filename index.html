@@ -191,12 +191,71 @@ footer{
   15%{opacity:.5}
   85%{opacity:.25}
   100%{transform:translateY(-110vh) rotate(20deg);opacity:0}
+}.cat {
+  position: fixed;
+  font-size: 34px;
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 10;
+  animation: flotarGatito 5s ease-in-out infinite;
+}
+
+.gato1 {
+  left: 4%;
+  top: 18%;
+}
+
+.gato2 {
+  right: 4%;
+  top: 45%;
+  animation-delay: -2s;
+}
+
+.gato3 {
+  left: 8%;
+  bottom: 10%;
+  animation-delay: -4s;
+}
+
+.huella {
+  position: fixed;
+  font-size: 22px;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.huella1 {
+  left: 18%;
+  top: 38%;
+  transform: rotate(-20deg);
+}
+
+.huella2 {
+  right: 16%;
+  top: 25%;
+  transform: rotate(20deg);
+}
+
+@keyframes flotarGatito {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
 }
 </style>
 </head>
 
 <body>
+<div class="cat gato1">🐈‍⬛</div>
+<div class="cat gato2">🐈</div>
+<div class="cat gato3">🐱</div>
 
+<div class="huella huella1">🐾</div>
+<div class="huella huella2">🐾</div>
 <script>
 for(let i=0;i<70;i++){
   let s=document.createElement("div");
