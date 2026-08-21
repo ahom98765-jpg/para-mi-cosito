@@ -767,26 +767,38 @@ Uno de ellos es Miguelín… 👀
 
 
 <section id="final">
+<section id="quiz">
 <div class="card center">
 
-<div class="kicker">fin… por ahora</div>
+<div class="kicker">🐈‍⬛ Miguelín pregunta</div>
 
-<h2>Gracias por existir. ♡</h2>
+<h2>¿Cuánto recuerdas de nosotros? 💗</h2>
 
 <p>
-Y si algún día necesitas recordar que hay alguien
-que piensa en ti, vuelve aquí.
+A ver si Miguelín consigue ponerte a prueba... 👀
 </p>
 
-<h2 style="font-size:42px">
-Te amo, cosito.
-</h2>
-
-<p>♡</p>
-
-<button class="btn" onclick="ir('inicio')">
-volver al principio ↺
+<button class="btn" onclick="document.getElementById('pregunta1').classList.remove('hidden')">
+comenzar ♡
 </button>
+
+<div id="pregunta1" class="secret hidden">
+
+<h3>♡ 1. ¿Qué veíamos juntos?</h3>
+
+<button class="btn" onclick="respuestaCorrecta(1)">
+🌙 Inuyasha
+</button>
+
+<button class="btn" onclick="respuestaIncorrecta()">
+🧑‍🦲 Avatar 
+</button>
+
+<button class="btn" onclick="respuestaIncorrecta()">
+🐠 Bob Esponja
+</button>
+
+</div>
 
 </div>
 </section>
